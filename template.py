@@ -8,8 +8,8 @@ from utils import prepare_plot_data
 app = Flask(__name__)
 
 # Load data once
-domains_df = pd.read_csv("data/domain_features.csv")
-exons_df = pd.read_csv("data/introns_exons.csv")
+domains_df = pd.read_csv("data/Domain_features.csv")
+exons_df = pd.read_csv("data/intron_exon.csv")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
