@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><c>Gene Visualizer</c></title>
+    <title>Gene Visualizer</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <h1>Gene Domain Visualizer</h1>
-    <form method="POST">
-        <input type="text" name="gene_name" placeholder="Enter Gene Name" required>
+<body><c>
+    <h1>Domain Visualizer </h1>
+    <form method="POST", textalign = "center">
+        <input type="text" name="gene_name" placeholder="Enter Gene Symbol" required>
         <input type="submit" value="Visualize">
     </form>
 
@@ -16,5 +16,14 @@
         <h2>Showing results for: {{ gene_name }}</h2>
         {{ plot_div | safe }}
     {% endif %}
+
+    {% if download_link %}
+        <p>Download .xls format Here!</p>
+        <form action="{{ download_link }}" method="GET">
+        <button type="submit" class="btn btn-primary">Download Excel</button>
+        </form>
+
+    {% endif %}
+    </c>
 </body>
 </html>
