@@ -1,6 +1,6 @@
 <h2>Protein Domain Visualizer </h2><br>
 
-<p> The domains features in proteins contribute greatly in scientific research </p>
+<p> Protein domains are self-stabilizing, independently folding regions of a polypeptide chain that form compact, three-dimensional structures. This project object is to visualize and identify the protein domain regions within a gene.</p>
 <p> To visualize the Domain fetures along with exons and introns in a gene, here API and Flask is used to create a dashboard </p> 
 <br>
 <h3> Data fetching using API </h3> 
